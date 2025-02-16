@@ -1,14 +1,30 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SinglefriutComponent } from './singlefriut/singlefriut.component';
 
 @Component({
   selector: 'app-fruitlist',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SinglefriutComponent],
   templateUrl: './fruitlist.component.html',
   styleUrl: './fruitlist.component.scss'
 })
 export class FruitlistComponent {
+
+  // zu testzwecken
+  // getColor(stars: number): string{
+  //   if(stars < 3){
+  //     return 'fontColorBad'
+  //   } else if (stars > 3){
+  //     return ' fontColorGood'
+  //   } else {
+  //     return 'fontColorDefault'
+  //   }
+  // }
+
+  fontcolorGood = 'green'
+  fontcolorBad = 'red'
+  
 
   fruitlist = [
     {
