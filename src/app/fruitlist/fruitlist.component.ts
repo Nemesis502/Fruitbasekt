@@ -20,11 +20,7 @@ export class FruitlistComponent {
   //   } else {
   //     return 'fontColorDefault'
   //   }
-  // }
-
-  fontcolorGood = 'green'
-  fontcolorBad = 'red'
-  
+  // }  
 
   fruitlist = [
     {
@@ -76,4 +72,8 @@ export class FruitlistComponent {
       reviews: [{ name: "Kevin W.", text: "Ganz gut in der Regel!" }, { name: "Oliver J.", text: "Absoluter Favorit beim Frühstück" }],
     },
   ]
+
+  namelog(name:string){
+    console.log(name);
+  }
 }
