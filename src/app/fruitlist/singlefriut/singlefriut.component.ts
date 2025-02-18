@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-singlefriut',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './singlefriut.component.html',
   styleUrl: './singlefriut.component.scss'
 })
@@ -17,9 +18,12 @@ export class SinglefriutComponent {
     reviews: [{ name: "Kevin W.", text: "ist lecker" }, { name: "Arne P.", text: "nicht so meins" }],
   };
 
+  inputData = "";
+
   @Output()fruitname = new EventEmitter<string>();
 
-  emitName(){
-    this.fruitname.emit(this.fruit.name)
+  SendInputData(){
+    this.fruitname.emit(this.inputData);
+    this.inputData = "";
   }
 }
